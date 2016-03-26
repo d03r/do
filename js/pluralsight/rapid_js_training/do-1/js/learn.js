@@ -86,3 +86,66 @@ else
     freeShipping = false;
 
 console.log(freeShipping);
+
+///////////////////////////////////
+
+var orderType =  'business';
+var shipMethod;
+
+if (orderType == 'business')
+    shipMethod = 'FedEx';
+else if (orderType == 'personal')
+    shipMethod = 'UPS Ground';
+else
+    shipMethod = 'USPS';
+
+console.log(shipMethod);
+
+///////////////////////////////////
+
+switch(orderType) {
+    case 'business':
+        shipMethod = 'FedEx';
+        break;
+    case 'personal':
+        shipMethod = 'UPS Ground';
+        break;
+    default:
+        shipMethod = 'UPSPS';
+}
+
+console.log(shipMethod);
+
+///////////////////////////////////
+
+var orderTotal = 99.99;
+var discount;
+
+switch(true) {
+    case orderTotal >= 50 && orderTotal < 75:
+        discount = 10;
+        break;
+    case orderTotal >= 75 && orderTotal < 100:
+        discount = 20;
+        break;
+    case orderTotal >= 100:
+        discount = 30;
+        break;
+    default:
+        discount = 0;
+}
+console.log(discount);
+
+
+///////////////////////////////////
+
+var lineItemCount = 3;
+var currentItem = 0;
+while (currentItem < lineItemCount) {
+    console.log("item: " + currentItem);
+    currentItem ++;
+}
+
+
+
+
